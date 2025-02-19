@@ -1,0 +1,24 @@
+<form #loginform="ngForm" (ngSubmit)="onSubmit(loginform)">
+    <div class="mb-2">
+      <label for="username" class="form-label">User Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        aria-describedby="emailHelp"
+        ngModel
+      />
+    </div>
+    <div class="mb-2">
+      <label for="userId" class="form-label">Password</label>
+      <input type="password" class="form-control" id="userId" name="pwd" ngModel />
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="!loginform.valid"
+    >
+      Submit
+    </button>
+  </form>

@@ -17,8 +17,8 @@ import { CardComponent } from './pages/shop/card/card.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { OrdiniComponent } from './components/ordini/ordini.component';
 import { FormCartComponent } from './components/form-cart/form-cart.component';
-import { FormsModule } from '@angular/forms';
 import { InfoProfiloComponent } from './components/info-profilo/info-profilo.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +31,8 @@ import { InfoProfiloComponent } from './components/info-profilo/info-profilo.com
     CartComponent,
     OrdiniComponent,
     FormCartComponent,
-    InfoProfiloComponent
+    InfoProfiloComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
