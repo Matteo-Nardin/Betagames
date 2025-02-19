@@ -11,9 +11,7 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent{
 
 
-  constructor(private serv:AuthService){
-
-  }
+  constructor(private serv:AuthService){}
 
   onSubmit(loginform:NgForm){
       this.login(loginform);
@@ -25,7 +23,9 @@ export class LoginComponent{
       pwd: loginform.form.value.pwd,
     }).subscribe((resp:any)=>{
       if(resp.data){
-        localStorage.setItem("token", resp.token);
+        localStorage.setItem("token", resp.data?.token);
+        //apetta è gia dentro?
+        this.serv.user.next(resp.data.user);//notifico al BehaviorSubject
       }
     })
 

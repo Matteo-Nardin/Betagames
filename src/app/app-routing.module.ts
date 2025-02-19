@@ -7,6 +7,7 @@ import { CartComponent } from './pages/cart/cart.component';
 import { OrdiniComponent } from './components/ordini/ordini.component';
 import { FormCartComponent } from './components/form-cart/form-cart.component';
 import { InfoProfiloComponent } from './components/info-profilo/info-profilo.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
     {path: "formcard", component:FormCartComponent},
     {path:"infoUser", component:InfoProfiloComponent}
   ]},
+  {path:"login", component:LoginComponent},
 ];
 
 @NgModule({
